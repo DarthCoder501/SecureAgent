@@ -54,7 +54,7 @@ async function handlePullRequestOpened({
       fullName: payload.repository.full_name,
       url: payload.repository.html_url,
     });
-    const files = await getChangesPerFile(payload);
+    const files = await getChangesPerFile
     const review: Review = await processPullRequest(
       octokit,
       payload,
