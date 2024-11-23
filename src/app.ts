@@ -22,7 +22,7 @@ const getChangesPerFile = async (payload: WebhookEventMap["pull_request"]) => {
     const octokit = await reviewApp.getInstallationOctokit(
       payload.installation.id
     );
-    const { data: files } = await octokit.rest.pulls.listFiles({
+    const { data: files } = await octokit.
       owner: payload.repository.owner.login,
       repo: payload.repository.name,
       pull_number: payload.pull_request.number,
